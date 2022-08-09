@@ -92,14 +92,30 @@ span {
     transition: transform 0.8s;
     transform-style: preserve-3d;
     animation-name: rotate;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
 }
 
+.flip-card:nth-of-type(3n-1) .flip-card-inner {
+    animation-delay: 4s;
+}
+
+.flip-card:nth-of-type(4) .flip-card-inner {
+    animation-delay: 1s;
+}
+
+.flip-card:nth-of-type(21) .flip-card-inner {
+    animation-delay: 3s;
+}
+
+.flip-card:nth-of-type(30) .flip-card-inner {
+    animation-delay: 2s;
+}
+
 .flip-card:hover .flip-card-inner {
-    animation-play-state: paused;
+    animation: step-end;
 }
 
 .flip-card-front,
@@ -117,7 +133,6 @@ span {
 
 .flip-card-back {
     transform: rotateY(180deg);
-
 }
 
 @keyframes rotate {
@@ -147,5 +162,3 @@ span {
         grid-template-rows: repeat(6, 250px);
     }
 }
-
-/*review*/
